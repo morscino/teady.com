@@ -6,7 +6,7 @@ import (
 )
 
 func NewRouter() *mux.Router {
-	
+
 	//This is the fuction that handles all of the application's routing
 	router := mux.NewRouter()
 
