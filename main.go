@@ -1,9 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
+
+	"teady.com/routes"
 )
 
 func main() {
-	fmt.Println("HELLO APP")
+	router := routes.NewRouter()
+
+	http.Handle("/", router)
+	http.ListenAndServe(":3000", nil)
+
 }
