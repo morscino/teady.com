@@ -1,14 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <h2>This is My Application</h2>
+{{template "header.html"}}
+
+<div id="wrapper">
+  <div id="content-wrapper">
+    <div id="content">
+      <h4>Featured Posts</h4>
+      <dl>
+        <dt>Sixpence</dt>
+        <dd> An awesome new template. <em> Created by <a href="http://www.nikhedonia.com/" title="SimplyGold">Sadhana Ganapathiraju</a>. 
+          Feel free to use it, modify it, and take it apart to learn from it. A mention and a link isn't 
+          required but much appreciated. I'll stop abusing the definition list now. ;-) </em> </dd>
+        <dt>Intrepid</dt>
+        <dd>Courageous. <em>Harry's thinks he's intrepid, but actually, he's only stupid.</em></dd>
+        <dt>Inconsequential</dt>
+        <dd>Unimportant. <em>The fact that you don't know the meaning of inconsequential is <del>in</del>consequential. </em></dd>
+        <dt>Benevolent</dt>
+        <dd>Good/nice/generous. <em>Will the benevolent god please raise their hand?</em></dd>
+        <dt>Fabricated</dt>
+        <dd class="last">Made-up. <em>Lies are but fabricated truths.</em></dd>
+      </dl>
+      <h6>Other Stuff</h6>
+      <blockquote>
+        <p>I can't help it if people want to go to hell. <cite>&mdash; <abbr title="Invisible Pink Unicorn">IPU</abbr></cite></p>
+      </blockquote>
+      <pre><code>This is unlike any code I've ever seen in my entire life. Well, minus my dreams, maybe.</code></pre>
+    </div>
+  </div>
+  
+  {{template "sidebar.html"}}
+  {{template "footer.html"}}
+
 </body>
 </html>
