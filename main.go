@@ -10,6 +10,9 @@ import (
 
 func main() {
 	db, err := models.DatabaseConnect()
+	// sess := models.StartDbSession()
+	// defer sess.Close()
+
 	if db != nil {
 		fmt.Println("Connected to Database")
 	}else if err != nil{

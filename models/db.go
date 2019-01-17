@@ -12,16 +12,16 @@ var err error
 
 var once sync.Once
 
-func startDbSession() (*mgo.Session, error) {
+func StartDbSession() (*mgo.Session, error) {
 	DbSession, err := mgo.Dial(config.URL)
 	if err != nil {
 		return nil, err
 	}
-	defer DbSession.Close()
+	//defer DbSession.Close()
 	return DbSession, nil
 }
 func initDatabase() (*mgo.Database, error) {
-	DbSession, err := startDbSession()
+	DbSession, err := StartDbSession()
 	if err != nil {
 		return nil, err
 	}
@@ -40,7 +40,7 @@ func DatabaseConnect() (*mgo.Database, error) {
 	return connection, err
 }
 
-func InsertCollectionData(collection, query string) error {
+func InsertCollectionData(collection string, query *Topic) error {
 	db, _ := DatabaseConnect()
 	err = db.C(collection).Insert(query)
 	return err

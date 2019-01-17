@@ -18,7 +18,7 @@ func NewRouter() *mux.Router {
 	router.HandleFunc("/topics", models.TopicsPageLoad).Methods("GET")
 	router.HandleFunc("/create/topic", models.TopicCreateLoad).Methods("GET")
 	
-
+	router.HandleFunc("/insert/topic",models.TopicInsert).Methods("POST")
 	router.HandleFunc("/RegisterUser", models.UserRegister).Methods("POST")
 
 	return router
