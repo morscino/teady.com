@@ -2,4 +2,4 @@
 
 This is an Awesome forum application written in GO
 
-------------UNDER CONSTRUCTION!!!----------
+------------UNDER CONSTRUCTION,BEWARE OF SHARP OBJECTS!!!----------
