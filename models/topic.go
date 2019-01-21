@@ -45,7 +45,7 @@ func TopicInsert(w http.ResponseWriter, r *http.Request){
 		//return with some error...Title already exist
 	//}
 	err = db.C("topics").Insert(topic)
-	//err := InsertCollectionData("topics",topic)
+	
 	fmt.Println(err)
 
 	
